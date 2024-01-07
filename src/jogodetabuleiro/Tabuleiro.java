@@ -28,6 +28,12 @@ public class Tabuleiro {
 		this.coluna = coluna;
 	}
 	
+	public Elemento elemento(int linha, int coluna) {
+		return elementos[linha][coluna];
+	}
 	
+	public Elemento elemento(Posicao posicao) {
+		return elementos[posicao.getLinha()][posicao.getColuna()];
+	}
 
 }
