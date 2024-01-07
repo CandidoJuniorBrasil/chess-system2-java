@@ -35,5 +35,10 @@ public class Tabuleiro {
 	public Elemento elemento(Posicao posicao) {
 		return elementos[posicao.getLinha()][posicao.getColuna()];
 	}
+	
+	public void movimentaElemento(Elemento elemento, Posicao posicao ) {
+		elementos[posicao.getLinha()][posicao.getColuna()] = elemento;
+		elemento.posicao = posicao;
+	}
 
 }

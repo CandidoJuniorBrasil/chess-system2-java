@@ -1,6 +1,9 @@
 package xadrez;
 
+import jogodetabuleiro.Posicao;
 import jogodetabuleiro.Tabuleiro;
+import xadrez.elementos.Rei;
+import xadrez.elementos.Torre;
 
 public class PartidaXadrez {
 	
@@ -8,6 +11,7 @@ public class PartidaXadrez {
 	
 	public PartidaXadrez() {
 		tabuleiro = new Tabuleiro(8,8);
+		inicioConfiguracao();
 	}
 	
 	public ElementoXadrez[][] obtendoElemento() {
@@ -18,5 +22,11 @@ public class PartidaXadrez {
 			}
 		}
 		return mat;
+	}
+	
+	private void inicioConfiguracao () {
+		tabuleiro.movimentaElemento(new Torre(tabuleiro, Cor.Branco), new Posicao(2,1));
+		tabuleiro.movimentaElemento(new Rei(tabuleiro, Cor.Preto), new Posicao(0,4));
+		tabuleiro.movimentaElemento(new Rei(tabuleiro, Cor.Branco), new Posicao(7,4));
 	}
 }
