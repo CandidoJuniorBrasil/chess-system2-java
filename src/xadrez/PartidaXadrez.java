@@ -28,8 +28,19 @@ public class PartidaXadrez {
 	}
 	
 	private void inicioConfiguracao () {
-		moveNovoElemento('b', 6, new Torre(tabuleiro,Cor.Branco));
-		moveNovoElemento('e', 8, new Rei(tabuleiro,Cor.Preto));
-		moveNovoElemento('e', 1, new Rei(tabuleiro,Cor.Branco));
+				
+		moveNovoElemento('c', 1, new Torre(tabuleiro, Cor.Branco));
+		moveNovoElemento('c', 2, new Torre(tabuleiro, Cor.Branco));
+		moveNovoElemento('d', 2, new Torre(tabuleiro, Cor.Branco));
+		moveNovoElemento('e', 2, new Torre(tabuleiro, Cor.Branco));
+		moveNovoElemento('e', 1, new Torre(tabuleiro, Cor.Branco));
+		moveNovoElemento('d', 1, new Rei(tabuleiro, Cor.Branco));
+
+        moveNovoElemento('c', 7, new Torre(tabuleiro, Cor.Preto));
+        moveNovoElemento('c', 8, new Torre(tabuleiro, Cor.Preto));
+        moveNovoElemento('d', 7, new Torre(tabuleiro, Cor.Preto));
+        moveNovoElemento('e', 7, new Torre(tabuleiro, Cor.Preto));
+        moveNovoElemento('e', 8, new Torre(tabuleiro, Cor.Preto));
+        moveNovoElemento('d', 8, new Rei(tabuleiro, Cor.Preto));
 	}
 }
